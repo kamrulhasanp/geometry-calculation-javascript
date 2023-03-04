@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry</title>
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- tailwindcss lik -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--  -->
+
+</head>
+<body>
+    <header class="h-20 bg-cyan-100 ">
+        <nav class="flex justify-between items-center px-10 ">
+            <div>
+                <h1 class="text-3xl font-bold">Interactive</h1>
+                <h3 class="text-2xl text-slate-400">Geometry Genius</h3>
+            </div>
+            <div class="text-white">
+                 <button class="bg-blue-600 rounded px-5 py-1"><a href="./blog.html">Blog</a> </button>        
+            </div>
+        </nav>
+    </header>
+    <!-- main section -->
+    <main class="mt-10 mx-10 grid md:grid-cols-5 gap-5">
+        <!-- angle div section -->
+        <section class="grid md:grid-cols-3 col-span-4 gap-4 text-center items-center ">
+            <!-- triangle div -->
+            <div id="triangle-random-color" class="p-5 border-2 height-custom rounded grid grid-cols-1 justify-items-center">
+                    <img  src="./images/triangle.png" alt="">
+                <div class="mt-3">
+                    <h3>Triangle</h3>
+                    <p>Area (A) = 0.5 x <span id="triangle-base">b</span> x <span id="triangle-height">h</span></p>
+                </div>
+                <div class="flex gap-5 mb-5">
+                    <p>
+                        <input id="triangle-base-input" class="bg-slate-100 w-20 px-5" type="text" value="" placeholder="b"> cm 
+                    </p>
+                    <p>
+                        <input id="triangle-height-input" class="bg-slate-100 w-20 px-5" type="text" value="" placeholder="h"> cm
+                    </p>
+                </div>
+                <button id="triangle-calculation" class="bg-sky-600 text-white rounded w-full py-1">Calculate</button>
+            </div>
+            <!-- Rectangle div -->
+            <div id="rectangle-random-color" class="p-5 border-2 height-custom rounded grid grid-cols-1 justify-items-center">
+  
+                    <img src="./images/rectangle.png" alt="">
+          
+                <div class="mt-3">
+                    <h3>Rectangle</h3>
+                    <p>Area (A) = <span id="rectangle-wide">w</span> x <span id="rectangle-length">l</span></p>
+                </div>
+                <div class="flex gap-5 mb-5">
+                    <p>
+                        <input id="rectangle-wide-input" class="bg-slate-100 w-20 px-5" type="text" value="" placeholder="w"> cm 
+                    </p>
+                    <p>
+                        <input id="rectangle-length-input" class="bg-slate-100 w-20 px-5" type="text" value="" placeholder="l"> cm
+                    </p>
+                </div>
+                <button id="rectangle-calculate" class="bg-sky-600 text-white rounded w-full py-1">Calculate</button>
+            </div>
+            <!-- Parallelogram div -->
+            <div id="parallelogram-random-color" class="p-5 border-2 height-custom rounded grid grid-cols-1 justify-items-center">
+
+                <img src="./images/parallelogram.png" alt="">
+                <div class="mt-3">
+                    <h3>Parallelogram</h3>
+                    <p>Area (A) = <span id="parallelogram-base">b</span> x <span id="parallelogram-height">h</span></p>
+                </div>
+                <div class="flex gap-5 mb-5">
+                    <p>
+                        <input id="parallelogram-base-input" class="bg-slate-100 w-20 px-5" type="text" value="" placeholder="b"> cm 
+                    </p>
+                    <p>
+                        <input id="parallelogram-height-input" class="bg-slate-100 w-20 px-5" type="text" value="" placeholder="h"> cm
+                    </p>
+                </div>
+                <button id="parallelogram-calculate" class="bg-sky-600 text-white rounded w-full py-1">Calculate</button>
+            </div>
+            <!-- Rhombus div -->
+            <div id="rhombus-random-color" class="p-5 border-2 height-custom rounded grid grid-cols-1 justify-items-center">
+                <img src="./images/rhombus.png" alt="">
+                <div class="mt-3">
+                    <h3>Rhombus</h3>
+                    <p>Area (A) = 0.5 x <span id="diagonal-1">d<sub>1</sub> </span> x <span id="diagonal-2">d<sub>2</sub></span></p>
+                </div>
+                <div class="flex gap-5 mb-5">
+                    <p>
+                        <input id="diagonal-1-input" class="bg-slate-100 w-20 px-5" type="text" value="" placeholder="d1"> cm 
+                    </p>
+                    <p>
+                        <input id="diagonal-2-input" class="bg-slate-100 w-20 px-5" type="text" value="" placeholder="d2"> cm
+                    </p>
+                </div>
+                <button id="rhombus-calculate" class="bg-sky-600 text-white rounded w-full py-1">Calculate</button>
+            </div>
+            <!-- Pentagon div -->
+            <div id="pentagon-random-color" class="p-5 border-2 height-custom rounded grid grid-cols-1 justify-items-center">
+                <img  src="./images/pentagon.png" alt="">
+                <div class="mt-3">
+                    <h3>Pentagon</h3>
+                    <p>Area (A) = 0.5 x <span id="pentagon-perimeter">p</span> x <span id="pentagon-height">b</span></p>
+                </div>
+                <div class="flex gap-5 mb-5">
+                    <p>
+                        <input id="pentagon-perimeter-input" class="bg-slate-100 w-20 px-5" type="text" value="" placeholder="p"> cm 
+                    </p>
+                    <p>
+                        <input id="pentagon-height-input" class="bg-slate-100 w-20 px-5" type="text" value="" placeholder="h"> cm
+                    </p>
+                </div>
+                <button id="pentagon-calculate" class="bg-sky-600 text-white rounded w-full py-1">Calculate</button>
+            </div>
+            <!-- Ellipse div -->
+            <div id="ellipse-random-color" class="p-5 border-2 height-custom rounded grid grid-cols-1 justify-items-center">
+                <img src="./images/ellipse.png" alt="">
+                <div class="mt-3">
+                    <h3>Ellipse</h3>
+                    <p>Area (A) = <span>&pi;</span><span id="ellipse-axis-a">a</span><span id="ellipse-axis-b">b</span></p>
+                </div>
+                <div class="flex gap-5 mb-5">
+                    <p>
+                        <input id="ellipse-axis-a-input" class="bg-slate-100 w-20 px-5" type="text" value="" placeholder="a"> cm 
+                    </p>
+                    <p>
+                        <input id="ellipse-axis-b-input" class="bg-slate-100 w-20 px-5" type="text" value="" placeholder="b"> cm
+                    </p>
+                </div>
+                <button id="ellipse-calculate" class="bg-sky-600 text-white rounded w-full py-1">Calculate</button>
+            </div>
+           
+        </section >
+         <!-- result section -->
+         <section class="text-center">
+             <div class="grid border-2 px-5 md:p-2/4 pb-10 rounded gap-5">
+                 <h3 class="font-bold text-center mb-3"> <u>Area Calculation</u> </h3>
+                 <div id="triangle-result-show" class="flex text-center md:gap-5 show-result hidden ">
+                     <p><span>1</span>. Triangle</p>
+                     <p><span id="triangle-result-field">00</span>cm<sup>2</sup></p>
+                     <button class="bg-sky-600 text-white rounded px-2">Covert to m<sup>2</sup></button>
+                 </div>
+                 <div id="rectangle-result-show" class="flex text-center md:gap-5 show-result hidden">
+                     <p><span>2</span>. Rectangle</p>
+                     <p><span id="rectangle-result-field">00</span>cm<sup>2</sup></p>
+                     <button class="bg-sky-600 text-white rounded px-2">Covert to m<sup>2</sup></button>
+                 </div>
+                 <div id="paralleloger-result-show" class="flex text-center md:gap-5 show-result hidden">
+                     <p><span>3</span>. Parallelogram</p>
+                     <p><span id="parallelogram-result-field">00</span>cm<sup>2</sup></p>
+                     <button class="bg-sky-600 text-white rounded ">Covert to m<sup>2</sup></button>
+                 </div>
+                 <div id="rhombus-result-show" class="flex text-center md:gap-5 show-result hidden">
+                     <p><span>4</span>. Rhombus</p>
+                     <p><span id="rhombus-result-field">00</span>cm<sup>2</sup></p>
+                     <button class="bg-sky-600 text-white rounded px-2">Covert to m<sup>2</sup></button>
+                 </div>
+                 <div id="pentagon-result-show" class="flex text-center md:gap-5 show-result hidden">
+                     <p><span>5</span>. Pentagon</p>
+                     <p><span id="pentagon-result-field">00</span>cm<sup>2</sup></p>
+                     <button class="bg-sky-600 text-white rounded px-2">Covert to m<sup>2</sup></button>
+                 </div>
+                 <div id="ellipse-result-show" class="flex text-center md:gap-5 show-result hidden">
+                     <p><span>6</span>. Ellipse</p>
+                     <p><span id="ellipse-result-field">00</span>cm<sup>2</sup></p>
+                     <button class="bg-sky-600 text-white rounded px-2">Covert to m<sup>2</sup></button>
+                 </div>
+             </div>
+         </section>
+    </main>
+
+    <!-- javaScript links -->
+    <script src="./js/utilities.js"></script>
+    <script src="./js/calculation.js"></script>
+    <script src="./js/bg-color.js"></script>
+</body>
+</html>
